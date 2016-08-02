@@ -1,0 +1,14 @@
+package Test
+    import LinkedHashMap
+
+    init
+        let m = new LinkedHashMap<unit, int>()
+        m.put(createUnit(Player(0), 'hfoo', vec2(0., 0.), angle(0.)), 3)
+        m.put(createUnit(Player(0), 'hfoo', vec2(0., 0.), angle(0.)), 4)
+
+        let iter = m.iterator()
+        while iter.hasNext()
+            let kv = iter.next()
+
+            print(kv.value.toString())
+        iter.close()
